@@ -1,0 +1,14 @@
+%% For making draft notes %%
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{xcolor}
+\newcommand{\append}[1]{\textcolor{green!60!black}{\textbf{Append:} #1}}
+\newcommand{\change}[1]{\textcolor{red!80!black}{\textbf{Change:} #1}}
+\newcommand{\todo}[1]{\textcolor{orange!80!black}{\textbf{Todo:} #1}}
+\newcommand{\note}[1]{\textcolor{blue!80!black}{\textbf{Note:} #1}}
+\newenvironment{todolist}
+{
+  \noindent
+  \color{orange!60!black}
+  Todo list:\vspace{-4pt}
+  \begin{list}{-}{\setlength{\leftmargin}{12pt} \setlength{\parsep}{-4pt}}
+}{\end{list}}
